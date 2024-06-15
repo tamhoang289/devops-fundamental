@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World Frontend</title>
+</head>
+<body>
+    <h1>Hello World from Frontend!</h1>
+    <p id="backend-message">Loading...</p>
+
+    <script>
+        fetch('/api/hello')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('backend-message').innerText = data.message;
+            })
+            .catch(error => {
+                document.getElementById('backend-message').innerText = 'Error fetching message from backend';
+            });
+    </script>
+</body>
+</html>
+

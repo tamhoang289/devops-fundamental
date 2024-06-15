@@ -22,6 +22,11 @@ Host github.com
 ├── backend/
 └── infrastructure/
 
+- **Build and Run frontend on local**:
+docker build -t frontend:latest .
+
+docker run -p 3000:3000 frontend:latest
+
 
 
 
