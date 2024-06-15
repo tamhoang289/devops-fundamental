@@ -51,5 +51,3 @@ docker build -t backend:latest .
 docker run --name backend-server --env-file .env -p 5000:5000 backend:latest
 
 
----
-test
