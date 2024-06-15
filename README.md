@@ -9,3 +9,19 @@ Host github.com
   User git
   IdentityFile ~/.ssh/tamhoang289
   IdentitiesOnly yes
+
+---------------------------------------
+### 1. Set Up GitHub Repository
+
+- **Create Repository**:
+    - Create a new repository on GitHub for your project.
+    - Clone the repository to your local machine.
+- **Initialize Project Structure**:
+    - Create directories for frontend, backend, and infrastructure:
+├── frontend/
+├── backend/
+└── infrastructure/
+
+
+
+
