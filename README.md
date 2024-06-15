@@ -22,11 +22,25 @@ Host github.com
 ├── backend/
 └── infrastructure/
 
-- **Build and Run frontend on local**:
+- **Build and Run frontend on localhost**:
 docker build -t frontend:latest .
 
 docker run -p 3000:3000 frontend:latest
 
+- **Start the database server on localhost**:
+docker run --name mysql-server -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=mydb -e MYSQL_USER=admin -e MYSQL_PASSWORD=password -p 13306:3306 -d mysql:8.0
 
+docker run --name mysql-server \
+  -e MYSQL_ROOT_PASSWORD=password \
+  -e MYSQL_DATABASE=mydb \
+  -e MYSQL_ROOT_HOST=% \
+  -p 13306:3306 \
+  -d mysql:8.0 \
+  --default-authentication-plugin=mysql_native_password
+
+- **Build and Run backend on localhost**:
+docker build -t backend:latest .
+
+docker run --name backend-server --env-file .env -p 5000:5000 backend:latest
 
 
