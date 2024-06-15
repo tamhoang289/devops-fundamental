@@ -11,6 +11,21 @@ Host github.com
   IdentitiesOnly yes
 
 ---------------------------------------
+### Exercise Overview
+
+**Objective**: Implement a complete CI/CD pipeline using GitHub Actions, including infrastructure provisioning with Terraform, security integration, containerization, and deployment to AWS.
+
+**Tasks**:
+
+1. **Set Up GitHub Repository**
+2. **Write Dockerfiles for Frontend and Backend**
+3. **Create Terraform Configurations**
+4. **Configure GitHub Actions for CI/CD**
+5. **Integrate DevSecOps Practices**
+6. **Deploy to AWS EC2 and RDS**
+7. **Set Up Monitoring and Logging**
+
+---------------------------------------
 ### 1. Set Up GitHub Repository
 
 - **Create Repository**:
